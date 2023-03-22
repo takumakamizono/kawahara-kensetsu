@@ -3,11 +3,16 @@
              株式会社 川原建設
             </div>
             <nav class="header__nav">
-              <ul class="header__ul">
-                <li class="header__li item"><a href="#">Service</a></li>
-                <li class="header__li item"><a href="#">Company</a></li>
-                <li class="header__li item"><a class="btn filled" href="#">Contact</a></li>
-              </ul>
+            <?php
+                $args=[
+                  'menu'=>'header-nav',
+                  'menu_class'=>'header__ul appear left',
+                  'container'=>false,
+                
+                ];
+                wp_nav_menu($args);
+                
+                ?>     
             </nav>
             <button class="mobile-menu__btn">
               <span></span>

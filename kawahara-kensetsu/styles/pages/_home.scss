@@ -1,5 +1,6 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
+@use "../parts/button" as *;
 
 #container {
   position: relative;
@@ -62,26 +63,41 @@ main {
   }
 
   &__li {
-    margin: 10px;
-
+    margin: 5px;
     @include mq(md) {
-      margin-left: 30px;
-      margin-right: 0;
     }
 
     & > a {
-      color: $cBlack;
+      color: $cWhite;
       text-decoration: none;
       text-transform: uppercase;
+      padding: 20px 15px;
+    }
+    &:nth-child(5) {
+      @extend .btn;
+      background: $cBtnColor;
+      padding: 10px 15px;
+      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+      &:hover {
+        background-color: $mainColor;
+
+        box-shadow: none;
+      }
+    }
+    &:last-child {
+      & i {
+        font-size: 25px;
+      }
     }
   }
 
   & .logo {
-    font-size: 35px;
+    font-size: 18px;
     justify-content: center;
 
     @include mq(md) {
       justify-content: flex-start;
+      font-size: 23px;
     }
   }
 }
