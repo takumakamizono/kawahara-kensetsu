@@ -14,6 +14,13 @@ img {
   margin-bottom: 16px !important;
 }
 
+.mb-md {
+  margin-bottom: 30px !important;
+
+  @include mq(lg) {
+    margin-bottom: 60px !important;
+  }
+}
 .mb-lg {
   margin-bottom: 80px !important;
 
@@ -83,12 +90,25 @@ img {
     font-size: 36px;
   }
 }
+.font-xl {
+  font-size: 28px;
+
+  @include mq(lg) {
+    font-size: 40px;
+  }
+}
+.section-titles {
+  text-align: center;
+  @extend .mb-md;
+}
 
 .main-title {
-  @extend .font-lg;
-  font-weight: 600;
+  @extend .font-xl;
+  font-family: new-order, sans-serif;
   margin-bottom: 0;
   display: block;
+  font-weight: 300;
+  color: $mainColor;
 }
 
 .sub-title {
