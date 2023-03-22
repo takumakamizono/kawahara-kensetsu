@@ -1,7 +1,7 @@
 @use "../globals" as *;
 
-$cMenuClose: $cBlack;
-$cMenuOpen: $cBlack;
+$cMenuClose: $cWhite;
+$cMenuOpen: $cWhite;
 
 .mobile-menu {
   position: fixed;
