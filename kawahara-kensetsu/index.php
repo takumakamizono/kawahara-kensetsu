@@ -9,25 +9,7 @@
         <div class="mobile-menu__cover"></div>
         <div class="nav-trigger"></div>
         <header class="header">
-          <div class="header__inner appear up">
-            <div class="logo item">
-              <img class="logo__img" src="images/logo.svg" />
-              <span class="logo__stay">Stay</span>
-              <span class="logo__world">World</span>
-            </div>
-            <nav class="header__nav">
-              <ul class="header__ul">
-                <li class="header__li item"><a href="#">Service</a></li>
-                <li class="header__li item"><a href="#">Company</a></li>
-                <li class="header__li item"><a class="btn filled" href="#">Contact</a></li>
-              </ul>
-            </nav>
-            <button class="mobile-menu__btn">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
+        <?php get_template_part('include/header'); ?>
         </header>
         <div id="content">
           <div class="hero">
