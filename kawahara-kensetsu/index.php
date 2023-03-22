@@ -17,19 +17,19 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="hero__title">Enjoy Rich</div>
-                  <img src="images/image-1.jpg" alt="" />
+                  <img src="<?= get_template_directory_uri(); ?>/images/image-1.jpg" alt="" />
                 </div>
                 <div class="swiper-slide">
                   <div class="hero__title">Fantastic</div>
-                  <img src="images/image-2.jpg" alt="" />
+                  <img src="<?= get_template_directory_uri(); ?>/images/image-2.jpg" alt="" />
                 </div>
                 <div class="swiper-slide">
                   <div class="hero__title">Experience</div>
-                  <img src="images/image-3.jpg" alt="" />
+                  <img src="<?= get_template_directory_uri(); ?>/images/image-3.jpg" alt="" />
                 </div>
               </div>
               <div class="hero__footer">
-                <img class="hero__downarrow" src="images/arrow.svg" />
+                <img class="hero__downarrow" src="<?= get_template_directory_uri(); ?>/images/arrow.svg" />
                 <span class="hero__scrolltext">scroll</span>
               </div>
             </div>
@@ -45,7 +45,7 @@
               <section class="travel">
                 <div class="travel__inner">
                   <div class="travel__img cover-slide">
-                    <img class="img-zoom" src="images/image-travel.jpg" />
+                    <img class="img-zoom" src="<?= get_template_directory_uri(); ?>/images/image-travel.jpg" />
                   </div>
                   <div class="travel__texts appear left">
                     <div class="travel__texts-inner">
@@ -81,7 +81,7 @@
                     <div class="cover-slide hover-darken">
                       <div
                         class="bg-img-zoom img-bg50"
-                        style="background-image: url(images/villa-1.jpg)"
+                        style="background-image: url(<?= get_template_directory_uri(); ?>/images/villa-1.jpg)"
                       ></div>
                     </div>
                     <p class="houses__title">House 1</p>
@@ -90,7 +90,7 @@
                     <div class="cover-slide hover-darken">
                       <div
                         class="bg-img-zoom img-bg50"
-                        style="background-image: url(images/villa-2.jpg)"
+                        style="background-image: url(<?= get_template_directory_uri(); ?>/images/villa-2.jpg)"
                       ></div>
                     </div>
                     <p class="houses__title">House 2</p>
@@ -99,7 +99,7 @@
                     <div class="cover-slide hover-darken">
                       <div
                         class="bg-img-zoom img-bg50"
-                        style="background-image: url(images/villa-3.jpg)"
+                        style="background-image: url(<?= get_template_directory_uri(); ?>/images/villa-3.jpg)"
                       ></div>
                     </div>
                     <p class="houses__title">House 3</p>
@@ -108,7 +108,7 @@
                     <div class="cover-slide hover-darken">
                       <div
                         class="bg-img-zoom img-bg50"
-                        style="background-image: url(images/villa-4.jpg)"
+                        style="background-image: url(<?= get_template_directory_uri(); ?>/images/villa-4.jpg)"
                       ></div>
                     </div>
                     <p class="houses__title">House 4</p>
@@ -117,7 +117,7 @@
                     <div class="cover-slide hover-darken">
                       <div
                         class="bg-img-zoom img-bg50"
-                        style="background-image: url(images/villa-5.jpg)"
+                        style="background-image: url(<?= get_template_directory_uri(); ?>/images/villa-5.jpg)"
                       ></div>
                     </div>
                     <p class="houses__title">House 5</p>
@@ -126,7 +126,7 @@
                     <div class="cover-slide hover-darken">
                       <div
                         class="bg-img-zoom img-bg50"
-                        style="background-image: url(images/villa-6.jpg)"
+                        style="background-image: url(<?= get_template_directory_uri(); ?>/images/villa-6.jpg)"
                       ></div>
                     </div>
                     <p class="houses__title">House 6</p>
@@ -147,25 +147,25 @@
                   <div class="popular__container">
                     <div class="popular__item item">
                       <div class="popular__img">
-                        <img src="images/image-p1.jpg" alt="" />
+                        <img src="<?= get_template_directory_uri(); ?>/images/image-p1.jpg" alt="" />
                       </div>
                       <p class="popular__title">パリ</p>
                     </div>
                     <div class="popular__item item">
                       <div class="popular__img">
-                        <img src="images/image-p2.jpg" alt="" />
+                        <img src="<?= get_template_directory_uri(); ?>/images/image-p2.jpg" alt="" />
                       </div>
                       <p class="popular__title">ニューヨーク</p>
                     </div>
                     <div class="popular__item item">
                       <div class="popular__img">
-                        <img src="images/image-p3.jpg" alt="" />
+                        <img src="<?= get_template_directory_uri(); ?>/images/image-p3.jpg" alt="" />
                       </div>
                       <p class="popular__title">香港</p>
                     </div>
                     <div class="popular__item item">
                       <div class="popular__img">
-                        <img src="images/image-p4.jpg" alt="" />
+                        <img src="<?= get_template_directory_uri(); ?>/images/image-p4.jpg" alt="" />
                       </div>
                       <p class="popular__title">大阪</p>
                     </div>
@@ -187,7 +187,7 @@
         </div>
         <div class="footer appear up">
           <div class="logo item">
-            <img class="logo__img" src="images/logo.svg" />
+            <img class="logo__img" src="<?= get_template_directory_uri(); ?>/images/logo.svg" />
             <span class="logo__stay">Stay</span>
             <span class="logo__world">World</span>
           </div>
@@ -204,7 +204,7 @@
       </div>
       <nav class="mobile-menu">
         <div class="logo">
-          <img class="logo__img" src="images/logo.svg" />
+          <img class="logo__img" src="<?= get_template_directory_uri(); ?>/images/logo.svg" />
           <span class="logo__stay">Stay</span>
           <span class="logo__world">World</span>
         </div>
@@ -230,6 +230,6 @@
         </ul>
       </nav>
     </div>
-    
+    <?php wp_footer(); ?>
   </body>
 </html>
