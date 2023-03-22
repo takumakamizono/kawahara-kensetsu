@@ -1,35 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <script src="scripts/vendors/pace.js"></script>
-    <link rel="stylesheet" href="styles/loader.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/vendors/css-reset.css" />
-    <link rel="stylesheet" href="styles/vendors/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    
-    <script src="scripts/vendors/gsap.min.js" defer></script>
-
-    <script src="scripts/vendors/swiper-bundle.min.js" defer></script>
-    <script src="scripts/libs/hero-slider.js" defer></script>
-
-    <script src="scripts/vendors/scroll-polyfill.js" defer></script>
-    <script src="scripts/libs/scroll.js" defer></script>
-    
-    <script src="scripts/libs/mobile-menu.js" defer></script>
-
-    <script src="scripts/libs/text-animation.js" defer></script>
-    <script src="scripts/main.js" defer></script>
-
+  <?php get_header();?>
   </head>
   <body>
     <div id="global-container">
