@@ -1,72 +1,77 @@
 class Main {
+  constructor() {
+    this.header = document.querySelector(".header");
+    this.hero = new HeroSlider(".swiper");
+    this.sides = document.querySelectorAll(".side");
+    this._observers = [];
+    this._init();
+  }
 
-    #observers = [];
+  _init() {
+    new MobileMenu();
+    this._scrollInit();
+  }
 
-    constructor() {
-        this.header = document.querySelector('.header');
-        this.hero = new HeroSlider('.swiper');
-        this.sides = document.querySelectorAll('.side');
-        this.#init();
+  destroy() {
+    this._observers.forEach((so) => so.destroy());
+  }
+
+  _scrollInit() {
+    this._observers.push(
+      new ScrollObserver("#main-content", this._sideAnimation.bind(this), {
+        once: false,
+        rootMargin: "-300px 0px",
+      }),
+      new ScrollObserver(".nav-trigger", this._navAnimation.bind(this), {
+        once: false,
+      }),
+      new ScrollObserver(".swiper", this._toggleSlideAnimation.bind(this), {
+        once: false,
+      }),
+      new ScrollObserver(".cover-slide", this._inviewAnimation),
+      new ScrollObserver(".appear", this._inviewAnimation),
+      new ScrollObserver(".tween-animate-title", this._textAnimation)
+    );
+    console.log(this._observers);
+  }
+
+  _toggleSlideAnimation(el, inview) {
+    if (inview) {
+      this.hero.start();
+    } else {
+      this.hero.stop();
     }
+  }
 
-    #init() {
-        new MobileMenu;
-        Pace.on('done', this.#scrollInit.bind(this));
+  _textAnimation(el, inview) {
+    if (inview) {
+      const ta = new TweenTextAnimation(el);
+      ta.animate();
     }
+  }
 
-    destroy() {
-        this.#observers.forEach(so => so.destroy());
+  _navAnimation(el, inview) {
+    if (inview) {
+      this.header.classList.remove("triggered");
+    } else {
+      this.header.classList.add("triggered");
     }
+  }
 
-    #scrollInit() {
-        this.#observers.push(
-            new ScrollObserver('#main-content', this.#sideAnimation.bind(this), { once: false, rootMargin: "-300px 0px" }),
-            new ScrollObserver('.nav-trigger', this.#navAnimation.bind(this), { once: false }),
-            new ScrollObserver('.swiper', this.#toggleSlideAnimation.bind(this), { once: false }),
-            new ScrollObserver('.cover-slide', this.#inviewAnimation),
-            new ScrollObserver('.appear', this.#inviewAnimation),
-            new ScrollObserver('.tween-animate-title', this.#textAnimation)
-        )
-        console.log(this.#observers);
+  _sideAnimation(el, inview) {
+    if (inview) {
+      this.sides.forEach((side) => side.classList.add("inview"));
+    } else {
+      this.sides.forEach((side) => side.classList.remove("inview"));
     }
+  }
 
-    #toggleSlideAnimation(el, inview) {
-        if(inview) {
-            this.hero.start();
-        } else {
-            this.hero.stop();
-        }
+  _inviewAnimation(el, inview) {
+    if (inview) {
+      el.classList.add("inview");
+    } else {
+      el.classList.remove("inview");
     }
-
-    #textAnimation(el, inview) {
-        if(inview) {
-            const ta = new TweenTextAnimation(el);
-            ta.animate();
-        }
-    }
-
-    #navAnimation(el, inview) {
-        if(inview) {
-            this.header.classList.remove('triggered');
-        } else {
-            this.header.classList.add('triggered');
-        }
-    }
-
-    #sideAnimation(el, inview) {
-        if(inview) {
-            this.sides.forEach(side => side.classList.add('inview'));
-        } else {
-            this.sides.forEach(side => side.classList.remove('inview'));
-        }
-    }
-
-    #inviewAnimation(el, inview) {
-        if(inview) {
-            el.classList.add('inview');
-        } else {
-            el.classList.remove('inview');
-        }
-    }
+  }
 }
-const main = new Main;
+const main = new Main();
