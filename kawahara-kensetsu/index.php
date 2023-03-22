@@ -21,6 +21,37 @@
               </div>
             </aside>
             <main>
+            <section class="news" >
+            <div class="section-titles">
+                  <h2 class="main-title tween-animate-title">
+                    NEWS
+                  </h2>
+                </div>
+                <div  class="news__inner">
+                <?php
+                     $args=[
+                       'post_type'=> 'post',
+                       'posts_per_page' => 5,
+                       
+                     ];
+                     $the_query = new WP_Query($args);
+                    ?>
+                  <?php if($the_query->have_posts()): ?>                    
+                  <ul class="news__list"> 
+              <?php while($the_query->have_posts()):$the_query->the_post(); ?>
+            <?php get_template_part('include/news'); ?>
+            <?php endwhile; ?>
+                  </ul>
+           <?php endif; ?>
+             <?php wp_reset_postdata(); ?>                
+                </div>
+                <div class="news__btn appear up">
+                    <a class="btn slide-bg item">more</a>
+                  </div>
+              </section>
+
+        
+             
               <section class="travel">
                 <div class="travel__inner">
                   <div class="travel__img cover-slide">

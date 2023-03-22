@@ -53,3 +53,16 @@ function my_document_title_parts($title){
 
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
+
+//category-label
+function categories_label() {
+  $cats = get_the_category();
+foreach($cats as $cat){
+        echo '<li>';
+        // echo 'class="'.esc_attr($cat->slug).'">';
+        echo esc_html($cat->name);
+        echo '</li>';
+
+    }
+
+}
