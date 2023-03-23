@@ -119,6 +119,23 @@
     }
   }
 }
+.btn02 {
+  border-bottom: 1px solid $mainColor;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  color: $mainColor;
+  position: relative;
+  padding: 10px 38px 10px;
+  text-decoration: none;
+  &::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 free";
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+  }
+}
 
 .btn-cubic {
   position: relative;
