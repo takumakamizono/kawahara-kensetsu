@@ -1,0 +1,31 @@
+<section class="works">
+                <div class="section-titles">
+                  <h2 class="main-title tween-animate-title">
+                    WORKS
+                  </h2>
+                  <p class="sub-title tween-animate-title">
+                  これまで弊社が手掛けた工事の一例をご紹介します
+                  </p>
+                </div>
+                <?php
+                     $args=[
+                       'post_type'=> 'post',
+                       'posts_per_page' => 6,
+                       'cat' => [3],
+                       
+                     ];
+                     $the_query = new WP_Query($args);
+                    ?>
+                      
+                <div class="works__inner">
+             <?php if($the_query->have_posts()): ?>   
+              <?php while($the_query->have_posts()):$the_query->the_post(); ?>
+                  <?php get_template_part('include/works-inside'); ?>
+                  <?php endwhile; ?>
+           <?php endif; ?>
+
+                  <div class="works__btn appear up">
+                    <a class="btn slide-bg item">more</a>
+                  </div>
+                </div>
+              </section>   

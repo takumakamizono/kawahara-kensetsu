@@ -333,70 +333,13 @@ main {
   }
 }
 
-.houses {
+.works {
   @extend .content-width;
   @extend .mb-lg;
 
   &__inner {
     @extend .flex;
-  }
-
-  &__title {
-    @extend .mb-sm;
-    @extend .font-lr;
-  }
-
-  &__item {
-    @include mq(md) {
-      flex-basis: 50%;
-    }
-    @include mq(lg) {
-      margin-bottom: 60px;
-    }
-  }
-
-  &__btn {
-    text-align: center;
-    flex-basis: 100%;
-  }
-}
-
-.popular {
-  &__header {
-    @extend .content-width;
-  }
-  &__inner {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 90%;
-      width: 100%;
-      background: $cBgGray;
-    }
-  }
-
-  &__container {
-    position: relative;
-    z-index: 2;
-    @extend .content-width;
-    @extend .flex;
     justify-content: space-between;
-  }
-
-  &__item {
-    @include mq(md) {
-      flex-basis: 47%;
-    }
-    @include mq(lg) {
-      flex-basis: 25%;
-    }
-    @include mq(xl) {
-      flex-basis: 23%;
-    }
   }
 
   &__title {
@@ -404,25 +347,54 @@ main {
     @extend .font-md;
   }
 
-  &__img {
-    height: 150px;
-    margin-bottom: 5px;
-
+  &__item {
+    margin-bottom: 60px;
+    min-height: 320px;
+    @include mq(md) {
+      flex-basis: 49%;
+    }
     @include mq(lg) {
-      height: 335px;
+      flex-basis: 32%;
     }
 
-    & > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    & time {
+      font-family: new-order, sans-serif;
+      text-decoration: none;
+      font-size: 12px;
     }
   }
 
   &__btn {
     text-align: center;
     flex-basis: 100%;
-    @extend .mb-lg;
+
+    & > a {
+      border: none;
+      background: #2e5895;
+      color: white;
+      &::after {
+        content: "\f054";
+        font-family: "Font Awesome 5 free";
+        font-weight: 600;
+        position: absolute;
+        right: 10px;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 180px;
+    @include mq(md) {
+      height: 230px;
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__contents {
+    padding: 10px 5px;
   }
 }
 
