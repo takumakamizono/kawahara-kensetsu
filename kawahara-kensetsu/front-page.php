@@ -17,7 +17,11 @@
            
             <?php get_template_part('include/side-left'); ?>
             <main>
-           
+              <?php get_template_part('include/news'); ?>
+              <?php get_template_part('include/company'); ?>
+              <?php get_template_part('include/works'); ?>
+              <?php get_template_part('include/recruit'); ?>
+
             </main>
             <?php get_template_part('include/side-right'); ?>
           
