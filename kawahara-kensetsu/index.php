@@ -46,7 +46,7 @@
              <?php wp_reset_postdata(); ?>                
                 </div>
                 <div class="news__btn appear up">
-                    <a class="btn slide-bg item">more</a>
+                    <a href=""  class="btn slide-bg item">more</a>
                   </div>
               </section>
 
