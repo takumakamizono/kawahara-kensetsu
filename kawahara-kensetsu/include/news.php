@@ -1,15 +1,28 @@
-<li id="post-<?php the_ID(); ?>"<?php post_class('news__box') ?> >
-<a href="<?php the_permalink(); ?>">
-                                 
-                       <ul class="cat fontSerif">
-                       <?php categories_label(); ?>
-                       </ul>
-                   
-                   <time><?php the_time( get_option( 'date_format' ) ); ?></time>  
-                   <p class="news__des"><?php the_title(); ?></p>
-                   </a>                      
-                  
-                </li>
-             
-
-                
+<section class="news" >
+            <div class="section-titles">
+                  <h2 class="main-title tween-animate-title">
+                    NEWS
+                  </h2>
+                </div>
+                <div  class="news__inner">
+                <?php
+                     $args=[
+                       'post_type'=> 'post',
+                       'posts_per_page' => 5,
+                       
+                     ];
+                     $the_query = new WP_Query($args);
+                    ?>
+                  <?php if($the_query->have_posts()): ?>                    
+                  <ul class="news__list"> 
+              <?php while($the_query->have_posts()):$the_query->the_post(); ?>
+            <?php get_template_part('include/news-inside'); ?>
+            <?php endwhile; ?>
+                  </ul>
+           <?php endif; ?>
+             <?php wp_reset_postdata(); ?>                
+                </div>
+                <div class="news__btn appear up">
+                    <a href=""  class="btn slide-bg item">more</a>
+                  </div>
+              </section>
