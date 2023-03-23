@@ -52,26 +52,26 @@
 
         
              
-              <section class="travel">
-                <div class="travel__inner">
-                  <div class="travel__img cover-slide">
-                    <img class="img-zoom" src="<?= get_template_directory_uri(); ?>/images/image-travel.jpg" />
+              <section class="company">
+                <div class="company__inner">
+                  <div class="company__img cover-slide">
+                    <img class="img-zoom" src="<?= get_template_directory_uri(); ?>/images/company01.png" />
                   </div>
-                  <div class="travel__texts appear left">
-                    <div class="travel__texts-inner">
-                      <div class="travel__title main-title item">
-                        <span class="purple">Travel</span>
-                        <span>the world</span>
+                  <div class="company__texts appear left">
+                    <div class="company__texts-inner">
+                      <div class="company__title main-title item">
+                        COMPANY
                       </div>
-                      <div class="travel__sub sub-title item">世界中を旅しよう</div>
-                      <div class="travel__description item">
+                      <div class="company__sub sub-title item">人とのつながりを大事に</div>
+                      <div class="company__description item">
                         <p>
-                          世界１５０ヶ国で<br />利用できる民泊サービスです。
+                        地域の発展に寄与できる<br />企業を目指して
                         </p>
-                        <p>あなたの望む宿がきっと見つかります。</p>
+                       
                       </div>
-                      <div class="travel__btn item">
-                        <button class="btn filled">もっと詳しく</button>
+                      <div class="company__btn item">
+                        <a class="btn02" href="">more</a>
+                      
                       </div>
                     </div>
                   </div>

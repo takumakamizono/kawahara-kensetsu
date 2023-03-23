@@ -154,6 +154,7 @@ main {
     }
 
     & time {
+      font-family: new-order, sans-serif;
       position: relative;
       padding-right: 20px;
 
@@ -221,8 +222,8 @@ main {
   }
 }
 
-.travel {
-  @extend .content-width;
+.company {
+  background: $cBgGray;
   @extend .mb-lg;
 
   &__inner {
@@ -230,15 +231,12 @@ main {
     z-index: 0;
     @extend .flex;
     justify-content: space-between;
-    background: $cBgGray;
-    padding: 15px;
+
+    padding: 15px 0;
 
     @include mq(md) {
-      padding: 50px;
-    }
-
-    @include mq(xl) {
-      padding: 50px 150px;
+      padding: 50px 0;
+      flex-direction: row-reverse;
     }
   }
   &__img {
@@ -251,7 +249,7 @@ main {
     }
 
     @include mq(md) {
-      flex-basis: 47%;
+      flex-basis: 50%;
     }
 
     @include mq(lg) {
@@ -270,37 +268,51 @@ main {
 
   &__texts {
     @extend .pb-sm;
+    padding: 0 15px;
 
     @include mq(md) {
+      padding: 0 50px;
       display: flex;
       align-items: flex-end;
       flex-basis: 47%;
     }
+    @include mq(xl) {
+      padding: 50px 0px 50px 300px;
+    }
 
     &.inview {
-      & .travel__title::before {
+      & .company__title::before {
         @include animation($name: scaleX, $duration: 0.3s, $delay: 1.5s);
       }
     }
   }
 
   &__title {
+    color: $mainColor;
     position: relative;
+    font-size: 30px;
+    @include mq(lg) {
+      font-size: 60px;
+    }
 
     &::before {
       display: none;
       position: absolute;
       content: "";
       height: 1px;
-      width: 100px;
+      width: 280px;
       top: 50%;
-      left: -120px;
-      background: $cBlack;
+      right: -300px;
+      background: $mainColor;
       transform: scaleX(0);
-      transform-origin: right;
+      transform-origin: left;
 
       @include mq(lg) {
         display: block;
+      }
+      @include mq(xl) {
+        width: 350px;
+        right: -400px;
       }
     }
   }
