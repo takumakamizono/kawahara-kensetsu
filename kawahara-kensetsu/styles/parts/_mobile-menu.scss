@@ -4,14 +4,24 @@ $cMenuClose: $cWhite;
 $cMenuOpen: $cWhite;
 
 .mobile-menu {
+  display: none;
   position: fixed;
   right: 0;
   top: 60px;
-  width: 300px;
+  width: 270px;
+  @include mq(sm) {
+    width: 300px;
+  }
 
   & .logo {
     padding: 0 40px;
-    font-size: 38px;
+    font-size: 20px;
+    color: $main-txt;
+    & span {
+      &:last-child {
+        color: $mainColor;
+      }
+    }
   }
 
   &__btn {
@@ -62,22 +72,26 @@ $cMenuOpen: $cWhite;
     padding: 0 40px;
     transition: transform 0.3s, opacity 0.2s;
     opacity: 0;
-  }
-  &__link {
-    display: block;
-    margin-top: 30px;
-    color: $cBlack;
-    text-decoration: none !important;
+    & a {
+      display: block;
+      margin-top: 30px;
+      color: $cBlack;
+      text-decoration: none !important;
+    }
   }
 }
 
 .menu-open {
   & #container {
-    transform: translate(-300px, 60px);
+    transform: translate(-265px, 0px);
     box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+    @include mq(sm) {
+      transform: translate(-300px, 0px);
+    }
   }
 
   & .mobile-menu {
+    display: block;
     &__cover {
       opacity: 1;
       visibility: visible;
@@ -86,7 +100,7 @@ $cMenuOpen: $cWhite;
       transform: none;
       opacity: 1;
 
-      @for $i from 1 through 5 {
+      @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
           transition-delay: $i * 0.07s;
         }
