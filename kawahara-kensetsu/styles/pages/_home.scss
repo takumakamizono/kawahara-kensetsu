@@ -24,11 +24,14 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: $navHeight;
+  height: 50px;
   background: $mainColor-o;
   display: flex;
   align-items: center;
   z-index: 100;
+  @include mq(lg) {
+    height: $navHeight;
+  }
 
   &.triggered {
     background: rgba(46, 87, 149, 0.3);
