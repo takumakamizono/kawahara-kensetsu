@@ -1,0 +1,8 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+@use "../parts/button" as *;
+
+.notice {
+  @extend .content-width;
+  @extend .mb-lg;
+}

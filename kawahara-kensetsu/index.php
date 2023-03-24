@@ -17,7 +17,32 @@
            
             <?php get_template_part('include/side-left'); ?>
             <main>
-           
+               <section class="notice">
+                <?php get_template_part('include/breadcrumb'); ?> 
+                <div class="works__inner"> 
+                  <?php if(have_posts()): ?>                
+               
+                    <?php while(have_posts()):the_post(); ?>
+                    <?php get_template_part('include/notice'); ?> 
+                <?php endwhile; ?>           
+                  <?php else: ?>
+                    <div class="notice__notinfo">
+                      <p>新しい情報はありません</p>
+                     
+                    </div>
+                    <div class="notice__btn">
+<a class="btn slide-bg" href="<?= esc_url(home_url('/')); ?>">トップページへ戻る</a> 
+</div>
+                  <?php endif; ?>
+                  <?php if(function_exists('wp_pagenavi')){wp_pagenavi();}  ?>
+                </div>
+            
+              </div>
+              </section>
+            
+             
+         
+             
             </main>
             <?php get_template_part('include/side-right'); ?>
           
