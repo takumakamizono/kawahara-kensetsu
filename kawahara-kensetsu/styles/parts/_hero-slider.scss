@@ -65,36 +65,36 @@
     overflow: hidden;
   }
 
-  &__downarrow {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 6px;
-    @include animation(
-      $name: kf-arrow-anime,
-      $iteration-count: infinite,
-      $duration: 2s,
-      $timing-function: linear
-    );
-  }
+  // &__downarrow {
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+  //   width: 6px;
+  //   @include animation(
+  //     $name: kf-arrow-anime,
+  //     $iteration-count: infinite,
+  //     $duration: 2s,
+  //     $timing-function: linear
+  //   );
+  // }
 
-  &__scrolltext {
-    position: absolute;
-    transform: rotate(90deg);
-    color: rgba(255, 255, 255, 0.7);
-    left: -8px;
-    top: 11px;
-    font-size: 1.2em;
-  }
+  // &__scrolltext {
+  //   position: absolute;
+  //   transform: rotate(90deg);
+  //   color: rgba(255, 255, 255, 0.7);
+  //   left: -8px;
+  //   top: 11px;
+  //   font-size: 1.2em;
+  // }
 }
 
-@keyframes kf-arrow-anime {
-  0%,
-  50%,
-  100% {
-    transform: translateY(-10%);
-  }
-  30% {
-    transform: none;
-  }
-}
+// @keyframes kf-arrow-anime {
+//   0%,
+//   50%,
+//   100% {
+//     transform: translateY(-10%);
+//   }
+//   30% {
+//     transform: none;
+//   }
+// }
