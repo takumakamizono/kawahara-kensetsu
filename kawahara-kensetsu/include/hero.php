@@ -15,8 +15,8 @@
                 </div>
               </div>
               <div class="hero__footer">
-                <img class="hero__downarrow" src="<?= get_template_directory_uri(); ?>/images/arrow.svg" />
-                <span class="hero__scrolltext">scroll</span>
+                <img class="arrow-downarrow" src="<?= get_template_directory_uri(); ?>/images/arrow.svg" />
+                <span class="arrow-scrolltext">scroll</span>
               </div>
             </div>
           </div>
