@@ -3,7 +3,7 @@
                   <div class="company__img cover-slide">
                     <img class="img-zoom" src="<?= get_template_directory_uri(); ?>/images/company01.png" />
                   </div>
-                  <div class="company__texts appear left">
+                  <div class="company__texts appear right">
                     <div class="company__texts-inner">
                       <div class="company__title main-title item">
                         COMPANY
