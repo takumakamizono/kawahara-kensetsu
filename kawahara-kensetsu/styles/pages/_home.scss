@@ -187,11 +187,13 @@ main {
     }
   }
   &__des {
+    font-family: "Noto Sans JP", sans-serif;
     display: block;
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 400;
     margin-bottom: 0;
     margin-top: 3px;
+
     @include mq(md) {
       font-size: 16px;
       display: inline-block;
@@ -209,8 +211,13 @@ main {
     }
   }
   &__btn {
-    text-align: right;
+    text-align: center;
+    @include mq(lg) {
+      text-align: right;
+    }
     & .btn {
+      max-width: 300px;
+      width: 100%;
       border: none;
       background: $mainColor;
       color: $cWhite;
