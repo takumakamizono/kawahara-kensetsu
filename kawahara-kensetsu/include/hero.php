@@ -1,3 +1,4 @@
+<?php if(is_home()): ?>
 <div class="hero">
             <div class="swiper">
               <div class="swiper-wrapper">
@@ -20,3 +21,40 @@
               </div>
             </div>
           </div>
+   <?php elseif(is_single() ||  is_archive()):?>
+    <?php 
+$category = get_the_category();
+$cat_name = $category[0]->cat_name;
+$category_nicename = $category[0]->category_nicename;
+?>
+      <div class="hero-sub">    
+        <div class="hero-sub__inner">
+              <div class="hero-sub__titles">
+              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_name); ?>  </h2>
+              <p class="hero-sub__subtitle"><?=  esc_html($category_nicename); ?></p>
+              </div>
+              <div class="hero-sub__img"> 
+                <?php if(is_category('news')):  ?>      
+                <img src="<?= get_template_directory_uri(); ?>/images/sub-topimage06.png" alt="ヘッダー画像" />  
+                <?php elseif(is_category('works')): ?>
+                <img src="<?= get_template_directory_uri(); ?>/images/sub-topimage06.png" alt="ヘッダー画像" />  
+             <?php endif; ?>
+            </div>     
+        </div>
+      </div>
+      <?php elseif(is_page()): ?>
+        <div class="hero-sub">    
+        <div class="hero-sub__inner">
+              <div class="hero-sub__titles">
+              <h2 class="hero-sub__maintitle "></h2>
+              <p class="hero-sub__subtitle"></p>
+              </div>
+              <div class="hero-sub__img"> 
+                   
+              
+                <img src="<?= get_template_directory_uri(); ?>/images/sub-topimage06.png" alt="ヘッダー画像" />  
+    
+            </div>     
+        </div>
+      </div>
+      <?php endif; ?>
