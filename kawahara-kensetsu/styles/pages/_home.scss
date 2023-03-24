@@ -379,6 +379,8 @@ main {
     flex-basis: 100%;
 
     & > a {
+      max-width: 300px;
+      width: 100%;
       border: none;
       background: #2e5895;
       color: white;
