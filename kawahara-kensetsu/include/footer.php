@@ -30,4 +30,6 @@
           </div> 
         </div>
         <div class="footer__copyright item">Copyright&copy; 株式会社 川原建設<span> All Rights Reserved.</span> </div>
+        <div id="page_top"><a href="#"></a></div>
         </div>
+        
