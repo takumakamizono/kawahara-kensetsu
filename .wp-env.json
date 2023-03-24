@@ -2,7 +2,9 @@
   "plugins": [
     "https://downloads.wordpress.org/plugin/wp-multibyte-patch.2.9.zip",
     "https://downloads.wordpress.org/plugin/duplicate-post.4.5.zip",
-    "https://downloads.wordpress.org/plugin/show-current-template.0.4.6.zip"
+    "https://downloads.wordpress.org/plugin/show-current-template.0.4.6.zip",
+    "https://downloads.wordpress.org/plugin/breadcrumb-navxt.7.2.0.zip",
+    "https://downloads.wordpress.org/plugin/wp-pagenavi.2.94.0.zip"
   ],
   "themes": ["./kawahara-kensetsu"]
 }
