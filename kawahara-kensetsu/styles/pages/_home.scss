@@ -464,6 +464,16 @@ main {
   }
 }
 
+.map {
+  &__inner {
+    width: 100%;
+    height: 300px;
+    @include mq(lg) {
+      height: 450px;
+    }
+  }
+}
+
 .footer {
   padding: 60px 0;
   @extend .content-width;
