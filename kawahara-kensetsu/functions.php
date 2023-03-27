@@ -66,3 +66,24 @@ foreach($cats as $cat){
     }
 
 }
+
+
+/**
+ * Contact Form 7 "フリガナ"のバリデーション追加
+ */
+function custom_wpcf7_validate_kana($result,$tag)
+{
+    $tag   = new WPCF7_Shortcode($tag);
+    $name  = $tag->name;
+    $value = isset($_POST[$name]) ? trim(wp_unslash(strtr((string) $_POST[$name], "\n", " "))) : "";
+ 
+    //全角カタカナ又は平仮名の入力チェック
+    if ($name === "your-kana") {
+        if(!preg_match("/^[ア-ヶーぁ-ん]+$/u", $value)) {
+            $result->invalidate( $tag,"全角カタカナ又は平仮名で入力してください。");
+        }
+    }
+    return $result;
+}
+add_filter('wpcf7_validate_text', 'custom_wpcf7_validate_kana', 11, 2);
+add_filter('wpcf7_validate_text*', 'custom_wpcf7_validate_kana', 11, 2);
