@@ -102,6 +102,10 @@ main {
       justify-content: flex-start;
       font-size: 23px;
     }
+    & > a {
+      text-decoration: none;
+      color: $cWhite;
+    }
   }
 }
 
