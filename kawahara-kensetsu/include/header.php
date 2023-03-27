@@ -1,6 +1,8 @@
 <div class="header__inner appear up">
             <div class="logo item">
+              <a href="<?= esc_url(home_url('/')); ?>">
              株式会社 川原建設
+             </a>
             </div>
             <nav class="header__nav">
             <?php
