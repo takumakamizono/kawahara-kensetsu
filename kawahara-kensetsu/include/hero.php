@@ -3,15 +3,16 @@
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="hero__title">Enjoy Rich</div>
+                  <div class="hero__title">美しい天降川や霧島の山々<br>そこに住む人々の環境を守りながら<br>皆さまとともに歩み続けます
+                </div>
                   <img src="<?= get_template_directory_uri(); ?>/images/slider.png" alt="" />
                 </div>
                 <div class="swiper-slide">
-                  <div class="hero__title">Fantastic</div>
+                  <div class="hero__title">美しい天降川や霧島の山々<br>そこに住む人々の環境を守りながら<br>皆さまとともに歩み続けます</div>
                   <img src="<?= get_template_directory_uri(); ?>/images/slider.png" alt="" />
                 </div>
                 <div class="swiper-slide">
-                  <div class="hero__title">Experience</div>
+                  <div class="hero__title">美しい天降川や霧島の山々<br>そこに住む人々の環境を守りながら<br>皆さまとともに歩み続けます</div>
                   <img src="<?= get_template_directory_uri(); ?>/images/slider.png" alt="" />
                 </div>
               </div>
