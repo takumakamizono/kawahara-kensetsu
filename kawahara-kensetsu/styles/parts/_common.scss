@@ -240,3 +240,101 @@ img {
     }
   }
 }
+
+/* Contact Form7 */
+
+.contact7 {
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  & input,
+  & textarea {
+    width: 100%;
+    border: none;
+    background: $cBgGray;
+    padding: 15px 20px;
+  }
+  & dt {
+    font-weight: normal;
+    margin-bottom: 20px;
+    & > p {
+      display: flex;
+      align-items: center;
+    }
+    @include mq(lg) {
+      margin-bottom: 0;
+      float: left;
+      clear: left;
+      width: 35%;
+      padding: 5px 10px 5px 0;
+    }
+  }
+  & dd {
+    margin: 0 0 30px 0;
+    @include mq(lg) {
+      margin-left: 35%;
+    }
+  }
+  & .must {
+    background: #ff1a00;
+  }
+  & .optional {
+    background: #999;
+  }
+  & .optional,
+  & .must {
+    font-weight: 700;
+    color: $cWhite;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+  }
+  & .wpcf7-list-item {
+    margin-left: 0;
+  }
+}
+
+.btn_contact7 {
+  text-align: center;
+  margin-top: 30px;
+  & input {
+    height: 50px;
+    width: 100%;
+    max-width: 400px;
+    background-color: $cBgGray;
+    color: $cWhite;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    border: 1px solid $cBgGray;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+    @include mq(lg) {
+      width: 70%;
+      background-color: $cBgGray;
+      color: $cWhite;
+      font-size: 1.1em;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      border: 1px solid $cBgGray;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -o-transition: 0.3s;
+      -ms-transition: 0.3s;
+      transition: 0.3s;
+    }
+    &:hover {
+      background-color: $cWhite;
+      color: $cBgGray;
+      @include mq(lg) {
+        background-color: $cWhite;
+        color: $cBgGray;
+      }
+    }
+  }
+}
