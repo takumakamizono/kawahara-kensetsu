@@ -91,7 +91,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(46, 87, 149, 0.5);
     }
   }
   &__titles {
@@ -99,15 +99,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: $cWhite;
   }
   &__maintitle {
-    font-size: 18px;
+    font-family: new-order, sans-serif;
+    text-transform: uppercase;
+    font-size: 23px;
     text-align: center;
+    font-weight: 400;
     @include mq(md) {
-      font-size: 30px;
+      font-size: 35px;
     }
     @include mq(lg) {
-      font-size: 40px;
+      font-size: 50px;
     }
     &.privacy {
       font-size: 16px;
