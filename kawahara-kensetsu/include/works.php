@@ -1,6 +1,6 @@
 <section class="works">
                 <div class="section-titles">
-                  <h2 class="main-title tween-animate-title">
+                  <h2 class="main-title">
                     WORKS
                   </h2>
                   <p class="sub-title tween-animate-title">
@@ -25,7 +25,11 @@
            <?php endif; ?>
 
                   <div class="works__btn appear up">
-                    <a class="btn slide-bg item">more</a>
+                  <?php
+                      $news = get_term_by('slug','works','category');
+                      $news_link = get_term_link($news,'category')
+                      ?>
+                    <a href="<?= esc_url($news_link); ?>"  class="btn slide-bg item">more</a>
                   </div>
                 </div>
               </section>   
