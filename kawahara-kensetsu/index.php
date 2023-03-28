@@ -29,15 +29,14 @@
                     <div class="notice__notinfo">
                       <p>新しい情報はありません</p>
                      
+                      <div class="notice__btn">
+                      <a class="btn slide-bg" href="<?= esc_url(home_url('/')); ?>">トップページへ戻る</a> 
+                      </div>
                     </div>
-                    <div class="notice__btn">
-<a class="btn slide-bg" href="<?= esc_url(home_url('/')); ?>">トップページへ戻る</a> 
-</div>
-                  <?php endif; ?>
-                  <?php if(function_exists('wp_pagenavi')){wp_pagenavi();}  ?>
+                
+                  <?php endif; ?>          
                 </div>
-            
-              </div>
+                <?php if(function_exists('wp_pagenavi')){wp_pagenavi();}  ?>
               </section>
             
              
