@@ -8,7 +8,7 @@
                 <img class="arrow-downarrow" src="<?= get_template_directory_uri(); ?>/images/arrow-b.svg" />
               </div>
         <div class="inquiry__btn appear up">
-                    <a class="btn slide-bg item">お問い合わせ</a>
+                    <a href="<?= esc_url(home_url('contact')); ?>"  class="btn slide-bg item">お問い合わせ</a>
                   </div>
 
     </div>
