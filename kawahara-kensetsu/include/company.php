@@ -1,7 +1,7 @@
 <section class="company">
                 <div class="company__inner">
                   <div class="company__img cover-slide">
-                    <img class="img-zoom" src="<?= get_template_directory_uri(); ?>/images/company01.png" />
+                    <img class="img-zoom" src="<?= get_template_directory_uri(); ?>/images/company.png" />
                   </div>
                   <div class="company__texts appear right">
                     <div class="company__texts-inner">
@@ -16,7 +16,7 @@
                        
                       </div>
                       <div class="company__btn item">
-                        <a class="btn02" href="">more</a>
+                        <a class="btn02" href="<?= esc_url(home_url('company')); ?>">more</a>
                       
                       </div>
                     </div>
