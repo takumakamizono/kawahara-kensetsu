@@ -5,6 +5,14 @@
 .notice {
   @extend .content-width;
   @extend .mb-lg;
+  &__notinfo {
+    text-align: center;
+    width: 100%;
+    & p {
+      padding-top: 80px;
+      @extend.mb-lg;
+    }
+  }
 }
 
 .single {
@@ -47,7 +55,8 @@
       }
     }
     &-text {
-      background: $cBgGray;
+      background: #fcfdff;
+      border: 0.5px solid $cBgGray;
       padding: 12px;
       border-radius: 3px;
       @include mq(lg) {
@@ -65,5 +74,8 @@
   }
   &__list-btn {
     text-align: center;
+    & > a {
+      border: solid 1px $lightGray;
+    }
   }
 }
