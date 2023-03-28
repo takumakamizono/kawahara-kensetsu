@@ -1,6 +1,5 @@
 @use "../globals" as *;
 
-
 .cover-slide {
   position: relative;
   overflow: hidden;
@@ -13,7 +12,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #eaebe6;
+    background-color: $cBgGray;
     opacity: 0;
   }
   &.inview {
