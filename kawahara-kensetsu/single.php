@@ -56,12 +56,7 @@ $link = get_category_link($cat_id);
 </div>
               
               </div>
-              </section>
-             
-            
-             
-         
-             
+              </section>     
             </main>
             <?php get_template_part('include/side-right'); ?>
           

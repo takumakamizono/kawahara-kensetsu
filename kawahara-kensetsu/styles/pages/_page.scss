@@ -134,6 +134,36 @@
     text-align: center;
   }
 }
+
+.site-map {
+  &__top {
+    @extend .mb-sm;
+
+    & a {
+      color: $mainColor;
+    }
+  }
+  &__box {
+    @extend .mb-sm;
+    & h2 {
+      margin-bottom: 10px;
+      color: $main-txt;
+      @extend .font-md;
+      & > a {
+        color: $main-txt;
+        @extend .font-md;
+      }
+    }
+    & ul {
+      @extend .mb-sm;
+      & li {
+        & > a {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
 .page-404 {
   @extend .font-sm;
   &__btn {
