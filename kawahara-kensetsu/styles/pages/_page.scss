@@ -20,6 +20,14 @@
     & p {
       @extend .font-sm;
       @extend .mb-sm;
+      line-height: 1.8em;
+    }
+    &-content {
+      & h4 {
+        font-family: "Noto Serif JP", serif;
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
     }
   }
   &__table {
