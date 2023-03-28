@@ -109,3 +109,15 @@ function redirect_thanks_page() {
 <?php
 
 }
+
+function twpp_change_excerpt_length( $length ) {
+  return 20; 
+}
+add_filter( 'excerpt_length', 'twpp_change_excerpt_length', 999 );
+
+function twpp_change_excerpt_more( $more ) {
+  $html = '<a href="' . esc_url( get_permalink() ) . '">[...続きを読む]</a>';
+  return $html;
+}
+
+add_filter( 'excerpt_more', 'twpp_change_excerpt_more' );
