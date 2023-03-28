@@ -304,7 +304,7 @@ img {
     width: 100%;
     max-width: 400px;
     background-color: $cBgGray;
-    color: $cWhite;
+    color: $main-txt;
     font-size: 1.1em;
     font-weight: bold;
     letter-spacing: 0.2em;
@@ -317,7 +317,7 @@ img {
     @include mq(lg) {
       width: 70%;
       background-color: $cBgGray;
-      color: $cWhite;
+
       font-size: 1.1em;
       font-weight: bold;
       letter-spacing: 0.2em;
@@ -337,4 +337,56 @@ img {
       }
     }
   }
+}
+
+/*ページナビ-----------------------------------------------------------*/
+
+.wp-pagenavi {
+  /* 全体 */
+  padding: 20px 0;
+  font-size: 12px;
+  text-align: center;
+  @include mq(md) {
+    font-size: 14px;
+  }
+  & > a {
+    color: $mainColor;
+  }
+  & .pages {
+    /* 左の表記 */
+    margin-right: 20px;
+    display: none;
+  }
+  & span.current {
+    background: $lightGray;
+    color: $cBlack;
+  }
+  & .previouspostslink,
+  & .nextpostslink {
+    display: none;
+  }
+  & .first,
+  & .extend {
+    margin-right: 10px;
+  }
+}
+
+.wp-pagenavi .current,
+.wp-pagenavi a.page {
+  /* ボタン */
+  display: inline-block;
+  border: solid 0.5px $lightGray;
+  width: 30px;
+  height: 30px;
+  display: inline-grid;
+  align-content: center;
+  text-align: center;
+  color: $lightGray;
+  font-weight: 900;
+}
+
+.wp-pagenavi a.page:hover {
+  /* マウスオーバー */
+  background: $lightGray;
+  color: $cBlack;
 }
