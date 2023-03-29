@@ -5,15 +5,15 @@
                 <div class="swiper-slide">
                   <div class="hero__title">美しい天降川や霧島の山々<br>そこに住む人々の環境を守りながら<br>皆さまとともに歩み続けます
                 </div>
-                  <img src="<?= get_template_directory_uri(); ?>/images/top-image01.png" alt="" />
+                  <img src="<?= get_template_directory_uri(); ?>/images/top-image02.png" alt="トップスライド画像" />
                 </div>
                 <div class="swiper-slide">
                   <div class="hero__title">美しい天降川や霧島の山々<br>そこに住む人々の環境を守りながら<br>皆さまとともに歩み続けます</div>
-                  <img src="<?= get_template_directory_uri(); ?>/images/top-image01.png" alt="" />
+                  <img src="<?= get_template_directory_uri(); ?>/images/top-image01.png" alt="トップスライド画像" />
                 </div>
                 <div class="swiper-slide">
                   <div class="hero__title">美しい天降川や霧島の山々<br>そこに住む人々の環境を守りながら<br>皆さまとともに歩み続けます</div>
-                  <img src="<?= get_template_directory_uri(); ?>/images/top-image01.png" alt="" />
+                  <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
                 </div>
               </div>
              
@@ -94,7 +94,7 @@ $slug = $page->post_name;
               <h2 class="hero-sub__maintitle ">404 NOT FOUND</h2>
               </div>
               <div class="hero-sub__img">        
-        <img src="<?= get_template_directory_uri(); ?>/images/sub-topimage04.png" alt="ヘッダー画像" />  
+        <img src="<?= get_template_directory_uri(); ?>/images/subtop-image04.png" alt="ヘッダー画像" />  
             </div>     
         </div>
       </div>

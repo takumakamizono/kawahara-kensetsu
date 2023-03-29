@@ -10,7 +10,7 @@ class HeroSlider {
       // direction: 'vertical',
       loop: true,
       grabCursor: true,
-      effect: "fade",
+      effect: "slide",
       centeredSlides: true,
       slidesPerView: 1,
       speed: 1000,
