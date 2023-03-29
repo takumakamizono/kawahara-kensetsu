@@ -30,36 +30,16 @@ Template Post Type: page
               <div class="page-content__inner">
                   <?php get_template_part('include/breadcrumb'); ?> 
                   <div class="site-map">
+                  <div class="site-map__box">   
 <div class="site-map__top">               
   <p><a href="<?php echo home_url(); ?>">TOPページ</a></p>
   </div> 
-  <div class="site-map__box">   
-  <?php
-    $args=array(
-      'orderby' => 'name',
-      'order' => 'ASC'
-     );
-    $categories=get_categories($args);
-    foreach($categories as $category) {
-      echo '<h2><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '"' . '>' . $category->name.'</a></h2>';
-  ?>
-    <ul>
-      <?php
-      global $post;
-      $myposts = get_posts('numberposts=100&category=' . $category->term_id);
-      foreach($myposts as $post) : setup_postdata($post);
-      ?>
-      <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-      <?php endforeach; ?>
-    </ul>
-  <?php }; ?>
-  </div> 
-  <div class="site-map__box">   
-  <h2>固定ページ</h2>
+ 
+  
   <?php
 $slugs = array( 'thanks'); // 除外ページをスラッグで指定.
 ?>
-<ul class="sm-list">
+<ul class="sm-list sm-list-page">
 <?php
 $ids = array();
 foreach ( $slugs as $page_slug ) {
@@ -79,6 +59,28 @@ wp_list_pages(
 </ul>
 
   </div> 
+  <div class="site-map__box">   
+  <?php
+    $args=array(
+      'orderby' => 'name',
+      'order' => 'ASC'
+     );
+    $categories=get_categories($args);
+    foreach($categories as $category) {
+      echo '<h2><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '"' . '>' . $category->name.'</a></h2>';
+  ?>
+    <ul class="sm-list sm-list-post">
+      <?php
+      global $post;
+      $myposts = get_posts('numberposts=100&category=' . $category->term_id);
+      foreach($myposts as $post) : setup_postdata($post);
+      ?>
+      <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+      <?php endforeach; ?>
+    </ul>
+  <?php }; ?>
+  </div> 
+ 
 </div>
 
 
