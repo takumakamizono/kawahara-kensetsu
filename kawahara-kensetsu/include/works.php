@@ -22,7 +22,13 @@
               <?php while($the_query->have_posts()):$the_query->the_post(); ?>
                   <?php get_template_part('include/works-inside'); ?>
                   <?php endwhile; ?>
-           <?php endif; ?>
+           <?php else: ?>
+
+<div class="works__notInfo">
+                      <p>現在、施工実績は準備中です</p>
+                    </div>
+
+            <?php endif; ?>
 
                   <div class="works__btn appear up">
                   <?php

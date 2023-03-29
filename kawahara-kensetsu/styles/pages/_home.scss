@@ -415,6 +415,13 @@ main {
   &__desc {
     font-size: 13px;
   }
+  &__notInfo {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .recruit {
   @extend .content-width;
