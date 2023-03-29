@@ -233,3 +233,18 @@
     }
   }
 }
+
+.iso-logos {
+  & td {
+    &::after {
+      margin-top: 10px;
+      width: 100%;
+      height: 70px;
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      background: url(./images/iso-logos.png) no-repeat;
+      background-size: contain;
+    }
+  }
+}
