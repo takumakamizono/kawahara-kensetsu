@@ -12,8 +12,8 @@
             </a>
             <div class="works__contents">
                     <p class="works__title"><?php the_title(); ?></p>
-                    <div class="works__desc">
+                    <!-- <div class="works__desc">
                       <p><?php the_excerpt(); ?></p>
-                    </div>
+                    </div> -->
                     </div>
                   </div>
