@@ -386,3 +386,42 @@ img {
   background: $lightGray;
   color: $cBlack;
 }
+
+.news-cate {
+  @extend .mb-md;
+  padding: 20px;
+  background: $cBgGray;
+  @include mq(lg) {
+    padding: 30px 50px;
+  }
+  & > p {
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 600;
+      content: "\f07c";
+    }
+  }
+
+  &__ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    @include mq(md) {
+      justify-content: left;
+    }
+    & li {
+      margin-right: 20px;
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+      &.current {
+        & > a {
+          background: $mainColor;
+          color: $cWhite;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
