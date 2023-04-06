@@ -6,7 +6,7 @@
                       <?php if(has_post_thumbnail()): ?>
                      <?php the_post_thumbnail('full'); ?>    
                      <?php else: ?>       
-                      <img src="<?= get_template_directory_uri(); ?>/images/villa-1.jpg" alt=""> 
+                      <img src="<?= get_template_directory_uri(); ?>/images/company.png" alt=""> 
                       <?php endif; ?>
                     </div>
             </a>
