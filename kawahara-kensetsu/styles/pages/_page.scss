@@ -29,6 +29,27 @@
         margin-bottom: 10px;
       }
     }
+    &-inner {
+      &-contents {
+        @extend .mb-md;
+        & h4 {
+          border-left: 4px solid $mainColor;
+          padding-left: 5px;
+        }
+      }
+      &-content {
+        margin-top: 20px;
+        @include mq(md) {
+          margin-top: 40px;
+        }
+        & h5 {
+          font-size: 16px;
+        }
+        & figure {
+          @extend .mb-md;
+        }
+      }
+    }
   }
   &__table {
     & table {
@@ -194,6 +215,7 @@
   list-style: none;
   & li {
     position: relative;
+    margin-bottom: 3px;
     &::after {
       content: "\f3bf";
       font-family: "Font Awesome 5 free";
@@ -202,6 +224,7 @@
       left: -30px;
       top: 50%;
       transform: rotate(90deg) translateX(-110%);
+      color: $lightGray;
     }
   }
 }
@@ -210,6 +233,7 @@
   list-style: none;
   & li {
     position: relative;
+    margin-bottom: 3px;
     &::after {
       content: "\f054";
       font-family: "Font Awesome 5 free";
@@ -218,6 +242,7 @@
       left: -30px;
       top: 50%;
       transform: translateY(-40%);
+      color: $lightGray;
     }
   }
 }
