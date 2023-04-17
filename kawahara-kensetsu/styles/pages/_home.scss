@@ -375,11 +375,11 @@ main {
 
   &__title {
     @extend .mb-sm;
-    @extend .font-md;
+    @extend .font-sm;
   }
 
   &__item {
-    margin-bottom: 60px;
+    @extend .mb-sm;
     min-height: 320px;
     @include mq(md) {
       flex-basis: 49%;
