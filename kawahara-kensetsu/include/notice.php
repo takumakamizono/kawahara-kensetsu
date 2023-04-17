@@ -11,7 +11,7 @@
         </a>
         <div class="works__contents">
                 <time><?php the_time( get_option( 'date_format' ) ); ?></time>  
-                    <h3 class="works__title"><?php the_title(); ?></h3>
+                    <p class="works__title"><?php the_title(); ?></p>
                     <!-- <div class="works__desc">
                       <p><?php //the_excerpt(); ?></p>
                     </div> -->
