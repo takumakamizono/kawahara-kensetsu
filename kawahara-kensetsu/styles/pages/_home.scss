@@ -647,9 +647,10 @@ main {
   & .tween-animate-title {
     color: $cBlack;
     text-decoration: none !important;
-    margin: 0 40px;
+    padding: 10px 40px;
     vertical-align: middle;
     letter-spacing: 2px;
+    border-radius: 5px;
   }
 
   &.left {
@@ -662,6 +663,16 @@ main {
     & .side__inner {
       transform-origin: top left;
       transform: rotate(-90deg);
+      & > a {
+        background: linear-gradient(
+            135deg,
+            rgb(66 126 255 / 50%) 0%,
+            rgb(241 63 121 / 50%) 70%
+          )
+          no-repeat;
+        color: $cWhite;
+        box-shadow: -2px -1px 5px rgba(66, 126, 255, 0.2);
+      }
     }
   }
 
