@@ -406,11 +406,15 @@ img {
     display: flex;
     list-style: none;
     padding: 0;
-    justify-content: center;
+
     @include mq(md) {
       justify-content: left;
     }
     & li {
+      & a {
+        padding: 10px 20px;
+        font-size: 12px;
+      }
       margin-right: 20px;
       &:nth-child(2) {
         margin-right: 0;

@@ -1,7 +1,7 @@
 <?php 
  $args =[
        'parent' => 0,
-       'hide_empty' => false  //投稿無記事のカテゴリも表示させる   
+       'hide_empty' => false
          ];
 $cats = get_categories($args);
 ?>
