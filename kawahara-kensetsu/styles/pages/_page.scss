@@ -53,10 +53,9 @@
   }
   &__table {
     & table {
-      border: solid 1px $lightGray;
       & tr {
         @extend .flex;
-        border-bottom: solid 1px $lightGray;
+        border-bottom: solid 1px rgba(136, 136, 136, 0.1);
       }
       & th {
         padding: 10px 0;
