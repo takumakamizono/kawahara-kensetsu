@@ -25,12 +25,13 @@ main {
   left: 0;
   width: 100%;
   height: $navHeight-m;
-  background: $mainColor-o;
+  background: transparent;
   display: flex;
   align-items: center;
   z-index: 100;
   @include mq(lg) {
     height: $navHeight;
+    background: $mainColor-o;
   }
 
   &.triggered {
@@ -105,6 +106,22 @@ main {
     & > a {
       text-decoration: none;
       color: $cWhite;
+      display: flex;
+      align-items: center;
+      &::before {
+        height: 24px;
+        width: 24px;
+        margin-right: 5px;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        background: url(./images/logo_white.png) no-repeat;
+        background-size: contain;
+        @include mq(lg) {
+          height: 30px;
+          width: 30px;
+        }
+      }
     }
   }
 }
