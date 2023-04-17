@@ -13,14 +13,14 @@ class HeroSlider {
       effect: "slide",
       centeredSlides: true,
       slidesPerView: 1,
-      speed: 1000,
+      speed: 2000,
     });
   }
 
   start(options = {}) {
     options = Object.assign(
       {
-        delay: 4000,
+        delay: 6000,
         disableOnInteraction: false,
       },
       options

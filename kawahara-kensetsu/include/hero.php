@@ -3,16 +3,17 @@
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="hero__title">美しい天降川や霧島の山々<br>そこに住む人々の環境を守りながら<br>皆さまとともに歩み続けます
+                  <div class="hero__title">美しい天降川や霧島の山々
                 </div>
-                  <img src="<?= get_template_directory_uri(); ?>/images/top-image02.png" alt="トップスライド画像" />
-                </div>
-                <div class="swiper-slide">
-                  <div class="hero__title">美しい天降川や霧島の山々<br>そこに住む人々の環境を守りながら<br>皆さまとともに歩み続けます</div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top-image01.png" alt="トップスライド画像" />
                 </div>
                 <div class="swiper-slide">
-                  <div class="hero__title">美しい天降川や霧島の山々<br>そこに住む人々の環境を守りながら<br>皆さまとともに歩み続けます</div>
+                  <div class="hero__title">そこに住む人々の環境を守りながら</div>
+                  <img src="<?= get_template_directory_uri(); ?>/images/top-image02.png" alt="トップスライド画像" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero__title">皆さまとともに歩み続けます</div>
+                  <div class="hero__logo">株式会社川原建設</div>
                   <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
                 </div>
               </div>
