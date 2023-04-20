@@ -1,7 +1,9 @@
 <?php 
  $args =[
-       'parent' => 0,
-       'hide_empty' => false
+       'parent' => 3,
+       'hide_empty' => false,
+      
+
          ];
 $cats = get_categories($args);
 ?>
@@ -10,6 +12,7 @@ $cats = get_categories($args);
                 <ul class="news-cate__ul appear up">
                 <?php foreach($cats as $cat ): ?>            
                    <?php
+                  
                      $cat_id = $cat->cat_ID;                     
                      $cat_title = $cat->name;
                      $cat_url = get_term_link($cat->term_id);
