@@ -17,30 +17,32 @@
            
             <?php get_template_part('include/side-left'); ?>
             <main>
-               <section class="notice">
+               <section class="news">
                 <?php get_template_part('include/breadcrumb'); ?> 
-                <?php get_template_part('include/news-categories'); ?>             
-
-                <div class="works__inner"> 
-
+                <div class="news__inner">
                   <?php if(have_posts()): ?>                
-               
+                    <ul class="news__list appear right"> 
                     <?php while(have_posts()):the_post(); ?>
-                    <?php get_template_part('include/notice'); ?> 
-                <?php endwhile; ?>           
+                    <?php get_template_part('include/news-inside'); ?> 
+                <?php endwhile; ?>  
+                </ul>         
                   <?php else: ?>
                     <div class="notice__notinfo">
                       <p>新しい情報はありません</p>
-                     
                       <div class="notice__btn">
                       <a class="btn slide-bg" href="<?= esc_url(home_url('/')); ?>">トップページへ戻る</a> 
                       </div>
                     </div>
                 
-                  <?php endif; ?>          
+                  <?php endif; ?>   
+                    
                 </div>
                 <?php if(function_exists('wp_pagenavi')){wp_pagenavi();}  ?>
               </section>
+            
+             
+         
+             
             </main>
             <?php get_template_part('include/side-right'); ?>
           
