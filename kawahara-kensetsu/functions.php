@@ -17,7 +17,7 @@ function add_async_defer_script($url) {
     wp_enqueue_style('fonts-adobi','https://use.typekit.net/bkx0sau.css', false);
     wp_enqueue_style('fonts-googleapis','https://fonts.googleapis.com/css?family=Noto+Sans+JP:wght@300;500;700|family=Noto+Serif+JP:wght@300;500;700&display=swap', false);
     wp_enqueue_style('swiper-bundle.min.css',DIRE.'/styles/vendors/swiper-bundle.min.css',array(), $version);
-    wp_enqueue_style('style.css',DIRE.'/style.css?v2',array(), $version);
+    wp_enqueue_style('style.css',DIRE.'/style.css?v3',array(), $version);
     wp_enqueue_script('fontawesome','https://kit.fontawesome.com/2bf622374b.js', false);
     wp_enqueue_script('jquery-min', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js', false);
     wp_enqueue_script('jquery.js', DIRE.  '/scripts/libs/jquery.js#defer', array(), $version);
@@ -58,16 +58,13 @@ add_theme_support('post-thumbnails');
 function categories_label() {
   $cats = get_the_category();
 foreach($cats as $cat){
+  if($cat->parent == 0){
         echo '<li>';
-        // echo 'class="'.esc_attr($cat->slug).'">';
         echo esc_html($cat->name);
         echo '</li>';
-
     }
-
+  }
 }
-
-
 /**
  * Contact Form 7 "フリガナ"のバリデーション追加
  */
