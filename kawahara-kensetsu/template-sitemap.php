@@ -37,11 +37,11 @@ Template Post Type: page
  
   
   <?php
-$slugs = array( 'thanks'); // 除外ページをスラッグで指定.
+$slugs = ['thanks']; // 除外ページをスラッグで指定.
 ?>
 <ul class="sm-list sm-list-page">
 <?php
-$ids = array();
+$ids = [];
 foreach ( $slugs as $page_slug ) {
   $page = get_page_by_path( $page_slug );
   array_push( $ids, $page->ID );
@@ -50,10 +50,10 @@ foreach ( $slugs as $page_slug ) {
 $exclude_ids = implode( ',', $ids );
 
 wp_list_pages(
-  array(
+ [
     'title_li' => '', // タイトルなし.
     'exclude'  => $exclude_ids, // 除外ページIDの配列を指定.
-  )
+ ]
 );
 ?>
 </ul>
@@ -61,10 +61,12 @@ wp_list_pages(
   </div> 
   <div class="site-map__box">   
   <?php
-    $args=array(
+    $args=[
+      
+      'exclude'=>3,
       'orderby' => 'name',
       'order' => 'ASC'
-     );
+    ];
     $categories=get_categories($args);
     foreach($categories as $category) {
       echo '<h2><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '"' . '>' . $category->name.'</a></h2>';
