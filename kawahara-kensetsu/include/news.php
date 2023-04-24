@@ -8,7 +8,7 @@
                 <?php
                      $args=[
                        'post_type'=> 'post',
-                       'category_name' => 'works,news',
+                       'category_name' => 'news',
                        'posts_per_page' => 5,        
                      ];
                      $the_query = new WP_Query($args);
