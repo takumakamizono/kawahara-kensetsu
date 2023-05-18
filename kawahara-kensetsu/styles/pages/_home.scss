@@ -635,12 +635,27 @@ main {
     }
   }
 
-  & > .logo {
-    font-size: 38px;
-    justify-content: center;
+  & .logo {
+    font-size: 17px;
 
-    @include mq(md) {
-      justify-content: flex-start;
+    @include mq(lg) {
+      font-size: 35px;
+      display: flex;
+      align-items: center;
+    }
+    &::before {
+      height: 24px;
+      width: 24px;
+      margin-right: 5px;
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      background: url(./images/logo_white.png) no-repeat;
+      background-size: contain;
+      @include mq(lg) {
+        height: 35px;
+        width: 35px;
+      }
     }
   }
   &__address {
