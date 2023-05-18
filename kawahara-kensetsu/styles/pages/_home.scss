@@ -428,8 +428,8 @@ main {
   }
 
   &__item {
-    @extend .mb-sm;
-    min-height: 320px;
+    @extend .mb-md;
+
     @include mq(md) {
       flex-basis: 49%;
     }
