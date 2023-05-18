@@ -6,21 +6,21 @@ class HeroSlider {
 
   _initSwiper() {
     return new Swiper(this.el, {
-      // Optional parameters
-      // direction: 'vertical',
       loop: true,
       grabCursor: true,
-      effect: "slide",
+      effect: "fade",
       centeredSlides: true,
       slidesPerView: 1,
-      speed: 2000,
+      speed: 3000,
+      stopOnLastSlide: true,
+      crossFade: true,
     });
   }
 
   start(options = {}) {
     options = Object.assign(
       {
-        delay: 6000,
+        delay: 4000,
         disableOnInteraction: false,
       },
       options
