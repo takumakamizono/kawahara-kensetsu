@@ -73,18 +73,12 @@ $slug = $page->post_name;
               <h2 class="hero-sub__maintitle "><?= strtoupper($post->post_name); ?></h2>
               <p class="hero-sub__subtitle"><?php the_title(); ?></p>
               </div>
-              <div class="hero-sub__img">    
-             <?php if($slug === "company"): ?>
-        <img src="<?= get_template_directory_uri(); ?>/images/subtop-image06.png" alt="ヘッダー画像" />  
-        <?php elseif($slug === "recruit"): ?>
-        <img src="<?= get_template_directory_uri(); ?>/images/subtop-image02.png" alt="ヘッダー画像" />  
-        <?php elseif($slug === "contact" || $slug === "thanks"): ?>
-        <img src="<?= get_template_directory_uri(); ?>/images/subtop-image03.png" alt="ヘッダー画像" />  
-        <?php elseif($slug === "privacy"): ?>
-        <img src="<?= get_template_directory_uri(); ?>/images/subtop-image05.png" alt="ヘッダー画像" />  
-        <?php elseif($slug === "sitemap"): ?>
-        <img src="<?= get_template_directory_uri(); ?>/images/subtop-image04.png" alt="ヘッダー画像" />  
-       <?php endif; ?>
+              <div class="hero-sub__img"> 
+              <?php if(has_post_thumbnail()): ?>        
+              <?php the_post_thumbnail(); ?> 
+              <?php else: ?>
+                <img src="<?= get_template_directory_uri(); ?>/images/subtop-image04.png" alt="noimage画像" />
+               <?php endif; ?>
             </div>     
         </div>
       </div>
