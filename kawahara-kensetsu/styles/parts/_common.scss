@@ -412,19 +412,22 @@ img {
   }
 
   &__ul {
-    display: flex;
+    @extend .flex960;
     list-style: none;
     padding: 0;
 
-    @include mq(md) {
-      justify-content: left;
-    }
+    justify-content: space-between;
     & li {
+      flex-basis: 49%;
       & a {
-        padding: 10px 20px;
-        font-size: 12px;
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 16px;
+        @include mq(lg) {
+          padding: 20px 20px;
+        }
       }
-      margin-right: 20px;
+
       &:nth-child(2) {
         margin-right: 0;
       }
