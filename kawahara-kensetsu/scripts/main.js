@@ -32,7 +32,6 @@ class Main {
       new ScrollObserver(".appear", this._inviewAnimation),
       new ScrollObserver(".tween-animate-title", this._textAnimation)
     );
-    console.log(this._observers);
   }
 
   _toggleSlideAnimation(el, inview) {
