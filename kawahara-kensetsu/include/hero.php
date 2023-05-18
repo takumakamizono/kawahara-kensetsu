@@ -34,9 +34,10 @@
               </div>
               <div class="hero-sub__img"> 
                 <?php if(is_category('news') || in_category('news')):  ?>      
-                <img src="<?= get_template_directory_uri(); ?>/images/subtop-image01.png" alt="ヘッダー画像" />  
+                  <img src="<?php the_field('news_img',210);?>" alt="お知らせのヘッダー画像">           
                 <?php elseif(is_category('works') || in_category('works') ): ?>
-                <img src="<?= get_template_directory_uri(); ?>/images/subtop-image07.png" alt="ヘッダー画像" />  
+                  <img src="<?php the_field('works_img',210);?>" alt="施工実績のヘッダー画像">  
+                            
              <?php endif; ?>
             </div>     
         </div>
@@ -54,10 +55,10 @@
               <p class="hero-sub__subtitle"><?=  esc_html($cat_name); ?></p>           
               </div>
               <div class="hero-sub__img"> 
-                <?php if(is_category('news') || in_category('news')):  ?>      
-                <img src="<?= get_template_directory_uri(); ?>/images/subtop-image01.png" alt="ヘッダー画像" />  
+                <?php if(is_category('news') || in_category('news')):  ?>  
+                 <img src="<?php the_field('news_img',210);?>" alt="お知らせのヘッダー画像">
                 <?php elseif(is_category('works') || in_category('works') ): ?>
-                <img src="<?= get_template_directory_uri(); ?>/images/subtop-image07.png" alt="ヘッダー画像" />  
+                  <img src="<?php the_field('works_img',210);?>" alt="施工実績のヘッダー画像">  
              <?php endif; ?>
             </div>     
         </div>
