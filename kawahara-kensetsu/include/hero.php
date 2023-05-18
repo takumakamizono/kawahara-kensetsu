@@ -3,18 +3,29 @@
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="hero__title">美しい天降川や霧島の山々
-                </div>
-                  <img src="<?= get_template_directory_uri(); ?>/images/top-image01.png" alt="トップスライド画像" />
+                  <div class="hero__title">美しい天降川や霧島の山々</div>
+                <?php if(get_field('top_img01',222)): ?>      
+              <img src="<?php the_field('top_img01',222);?>" alt="スライド画像01">
+              <?php else: ?>
+                  <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
+              <?php endif; ?>
                 </div>
                 <div class="swiper-slide">
                   <div class="hero__title">そこに住む人々の環境を守りながら</div>
-                  <img src="<?= get_template_directory_uri(); ?>/images/top-image02.png" alt="トップスライド画像" />
+                  <?php if(get_field('top_img02',222)): ?>      
+              <img src="<?php the_field('top_img02',222);?>" alt="スライド画像02">
+              <?php else: ?>
+                  <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
+              <?php endif; ?>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-swiper-autoplay="6000">
                   <div class="hero__title">皆さまとともに歩み続けます</div>
                   <div class="hero__logo">株式会社川原建設</div>
+                  <?php if(get_field('top_img03',222)): ?>      
+              <img src="<?php the_field('top_img03',222);?>" alt="スライド画像03">
+              <?php else: ?>
                   <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
+              <?php endif; ?>
                 </div>
               </div>
              
@@ -89,11 +100,13 @@ $slug = $page->post_name;
               <div class="hero-sub__titles">
               <h2 class="hero-sub__maintitle ">404 NOT FOUND</h2>
               </div>
-              <div class="hero-sub__img">        
-        <img src="<?= get_template_directory_uri(); ?>/images/subtop-image04.png" alt="ヘッダー画像" />  
+              <div class="hero-sub__img">  
+                <?php if(get_field('404_img',210)): ?>      
+              <img src="<?php the_field('404_img',210);?>" alt="404ページのヘッダー画像">
+              <?php else: ?>
+                <img src="<?= get_template_directory_uri(); ?>/images/subtop-image04.png" alt="noimage画像" />
+               <?php endif; ?>
             </div>     
         </div>
       </div>
-
-
         <?php endif; ?>
