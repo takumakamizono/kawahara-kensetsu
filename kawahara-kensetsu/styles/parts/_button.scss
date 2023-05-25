@@ -4,8 +4,7 @@
   position: relative;
   display: inline-block;
   background-color: $cWhite;
-  // border: 1px solid $cBlack;
-  //font-weight: 600;
+
   padding: 10px 40px;
   margin: 10px auto;
   cursor: pointer;
@@ -118,6 +117,29 @@
       }
     }
   }
+  &.btn-block {
+    background: $mainColor;
+    color: $cWhite;
+    font-weight: 600;
+    border-top: 4px solid #789ed7;
+    border-right: 4px solid #1d437b;
+    border-bottom: 4px solid #1d437b;
+    border-left: 4px solid #789ed7;
+
+    &:hover {
+      border-top: 4px solid #1d437b;
+      border-right: 4px solid #789ed7;
+      border-bottom: 4px solid #789ed7;
+      border-left: 4px solid #1d437b;
+    }
+    &::after {
+      content: "\f054";
+      font-family: "Font Awesome 5 free";
+      font-weight: 600;
+      position: absolute;
+      right: 10px;
+    }
+  }
 }
 .btn02 {
   border-bottom: 1px solid $mainColor;
@@ -159,7 +181,7 @@
     text-align: center;
     transition: all 0.3s;
     transform-origin: center center -25px;
-    color: black;
+    color: $cBlack;
   }
 
   & .hovering {
