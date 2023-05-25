@@ -38,11 +38,7 @@
                     
                 </div>
                 <?php if(function_exists('wp_pagenavi')){wp_pagenavi();}  ?>
-              </section>
-            
-             
-         
-             
+              </section>    
             </main>
             <?php get_template_part('include/side-right'); ?>
           

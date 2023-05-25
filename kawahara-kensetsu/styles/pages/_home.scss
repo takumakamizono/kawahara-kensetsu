@@ -750,27 +750,3 @@ main {
     }
   }
 }
-
-.icon {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -20px;
-    width: 1em;
-    height: 1em;
-    transform: translateY(-50%);
-    background-position: center;
-    background-repeat: none;
-    background-size: contain;
-  }
-
-  &.twitter::before {
-    background-image: url(../images/twitter.svg);
-  }
-  &.fb::before {
-    background-image: url(../images/facebook.svg);
-  }
-}

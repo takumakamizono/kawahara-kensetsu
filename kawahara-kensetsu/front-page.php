@@ -13,8 +13,7 @@
         </header>
         <div id="content">
         <?php get_template_part('include/hero'); ?>
-          <div id="main-content">
-           
+          <div id="main-content">    
             <?php get_template_part('include/side-left'); ?>
             <main>
               <?php get_template_part('include/news'); ?>

@@ -31,9 +31,7 @@
              </div>
                 
         </div>
-          </div>
-           
-               
+          </div>        
             </main>
             <?php get_template_part('include/side-right'); ?>
           
