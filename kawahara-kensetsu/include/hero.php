@@ -5,7 +5,7 @@
                 <div class="swiper-slide">
                   <div class="hero__title">美しい天降川や霧島の山々</div>
                 <?php if(get_field('top_img01',222)): ?>      
-              <img src="<?php the_field('top_img01',222);?>" alt="スライド画像01">
+              <img src="<?php the_field('top_img01',222);?>" alt="トップスライド画像01">
               <?php else: ?>
                   <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
               <?php endif; ?>
@@ -13,7 +13,7 @@
                 <div class="swiper-slide">
                   <div class="hero__title">そこに住む人々の環境を守りながら</div>
                   <?php if(get_field('top_img02',222)): ?>      
-              <img src="<?php the_field('top_img02',222);?>" alt="スライド画像02">
+              <img src="<?php the_field('top_img02',222);?>" alt="トップスライド画像02">
               <?php else: ?>
                   <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
               <?php endif; ?>
@@ -22,7 +22,7 @@
                   <div class="hero__title">皆さまとともに歩み続けます</div>
                   <div class="hero__logo">株式会社川原建設</div>
                   <?php if(get_field('top_img03',222)): ?>      
-              <img src="<?php the_field('top_img03',222);?>" alt="スライド画像03">
+              <img src="<?php the_field('top_img03',222);?>" alt="トップスライド画像03">
               <?php else: ?>
                   <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
               <?php endif; ?>
@@ -47,8 +47,7 @@
                 <?php if(is_category('news') || in_category('news')):  ?>      
                   <img src="<?php the_field('news_img',210);?>" alt="お知らせのヘッダー画像">           
                 <?php elseif(is_category('works') || in_category('works') ): ?>
-                  <img src="<?php the_field('works_img',210);?>" alt="施工実績のヘッダー画像">  
-                            
+                  <img src="<?php the_field('works_img',210);?>" alt="施工実績のヘッダー画像">                     
              <?php endif; ?>
             </div>     
         </div>

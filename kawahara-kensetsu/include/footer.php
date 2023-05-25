@@ -25,7 +25,7 @@
             <div class="footer__right">
             <div class="footer__img">
               <a href="https://www.city-kirishima.jp/"target="_blank" rel="noopener">
-              <img src="<?= get_template_directory_uri(); ?>/images/kirishima-image.jpg" alt="">
+              <img src="<?= get_template_directory_uri(); ?>/images/kirishima-image.jpg" alt="霧島市のHP画像">
               </a>
             </div>
        
