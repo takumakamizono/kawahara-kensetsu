@@ -3,5 +3,5 @@ package-lock.json
 images
 style.css
 style.css.map
-
+*.min.js
  
